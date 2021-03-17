@@ -1,0 +1,50 @@
+<style>
+  h3
+  {
+      font-family: 'Dancing Script';
+  }
+    </style> 
+<body>
+<div>
+    <h3>NEW GIFTSDATA FORM</h3>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Creators_name" id="creators_name" [(ngModel)]="creators_name" name="creators_name">
+      </mat-form-field> <br />  
+      <mat-form-field appearance="fill">
+        <mat-label>Event_category_name</mat-label>
+        <mat-select [(ngModel)]="event_category_name" name="event_category_name">
+          <mat-option value="Birthday">Birthday </mat-option>
+          <mat-option value="Anniversary">Anniversary</mat-option>
+          <mat-option value="Graduation">Graduation</mat-option>
+          <mat-option value="Holiday">Holiday</mat-option>
+        </mat-select>
+      </mat-form-field> <br />  
+      <mat-form-field appearance="fill">
+        <mat-label>Recipient</mat-label>
+        <mat-select [(ngModel)]="recipient" name="recipient">
+          <mat-option value="him">him</mat-option>
+          <mat-option value="her">her</mat-option>
+          <mat-option value="kids">kids</mat-option>
+          <mat-option value="Babies">Babies</mat-option>
+        </mat-select>
+      </mat-form-field><br />  
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput placeholder="Age" id="age" [(ngModel)]="age" name="age" type="number" min="00"
+          max="100" required>
+      </mat-form-field><br />
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Gift_Category" id="gift_Category" [(ngModel)]="gift_Category" name="gift_Category">
+      </mat-form-field> <br />
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Gift_idea" id="gift_idea" [(ngModel)]="gift_idea" name="gift_idea">
+      </mat-form-field> <br />
+      <mat-label>Date</mat-label><br />
+      <input [(ngModel)]="myDatepickerr" name="myDatepickerr" type="Date"><br />
+        <p>
+        <button type="submit" mat-raised-button>Submit</button>
+      </p>
+      </form>  
+  </div>
+</body>

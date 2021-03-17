@@ -1,0 +1,32 @@
+<style>
+    h2{text-align: center;
+    font-size: 200%;
+    font-family: 'Dancing Script';
+      }
+    </style>
+
+    <h2> {{mode}} Covid Essentials </h2>      
+    <body>
+    <form (ngSubmit)="Onsubmit()" #myForm="ngForm">
+      <mat-form-field >
+        <input matInput placeholder="Fabric Details:" id="fabricdetails" [(ngModel)]= "fabricdetails" name="fabricdetails" >
+      </mat-form-field>    
+
+      <mat-form-field >
+        <input matInput placeholder="Sanitizer Type:" id="sanitizertype" [(ngModel)]="sanitizertype" name="sanitizertype" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <input matInput placeholder="Alcohol Content:" id="alcoholcontent" [(ngModel)]="alcoholcontent" name="alcoholcontent" >
+      </mat-form-field>    
+
+      <mat-form-field >
+        <input matInput placeholder="Handsoap Type:" id="handsoaptype" [(ngModel)]="handsoaptype" name="handsoaptype" >
+      </mat-form-field>
+
+      <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+          </p>
+    </form>
+
+    

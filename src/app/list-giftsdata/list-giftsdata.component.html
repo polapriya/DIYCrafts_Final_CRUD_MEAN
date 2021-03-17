@@ -1,0 +1,39 @@
+<style>
+  h1{ text-align : center;
+    }
+
+    .content {
+    color: black;
+     text-align: center;
+    font-size: 15px;
+    background-color: floralwhite;
+      font-family: 'Courier';
+}
+
+</style>
+<div class = "content">
+  <h1> Gift List </h1>
+    <table>
+      <th>Creators_name</th> 
+          <th>Event_category_name</th> 
+          <th>Recipient</th> 
+          <th>Age</th>
+          <th>Gift_category</th> 
+          <th>Gift_idea</th> 
+          <th>Date</th>
+          <th>Activity</th>
+      <tr *ngFor ="let gift of giftsdata let i = index">
+                    
+      <td>{{gift.Creators_name}}</td> 
+      <td>{{gift.Event_category_name}}</td> 
+      <td>{{gift.Recipient}}</td> 
+      <td>{{gift.Age}}</td> 
+      <td>{{gift.Gift_category}}</td> 
+      <td>{{gift.Gift_idea}}</td> 
+      <td>{{gift.Date}}</td>
+      <td><button mat-button color="warn" (click)="onDelete(gift._id)">DELETE</button>
+          <button mat-button color="accent" [routerLink]="['/editGiftsdata', gift._id]">UPDATE</button></td>
+    
+  </tr>
+    </table>
+</div>

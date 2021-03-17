@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  
+* {
+  box-sizing: border-box;
+  
+}
+/* Style the header */
+.button {
+  
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Dancing Script';
+  background-color: #d8653f;
+}
+
+.button {border-radius: 50%;
+  }
+.button2 {border-radius: 50%;
+}
+.button3 {
+  border-radius: 50%;}
+.button4 {border-radius: 50%;}
+
+/* Create two columns/boxes that floats next to each other */
+summary{
+  float: left;
+  padding: 20px;
+  width: 25%;
+  background-color:  #c7947f;
+  text-align: center;
+  height: 300px;
+}
+nav {
+  float: left;
+  width: 25%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #e9d6b9;
+  padding: 30px;
+  font-family: 'Dancing Script';
+  text-align: center;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 25%;
+  background-color: #ecbca3;
+  text-align: center;
+  font-family: 'Dancing Script';
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+
+aside{
+  float: left;
+  padding: 20px;
+  width: 25%;
+  background-color: #db9f85;
+  text-align: center;
+  height: 300px;
+}
+footer{
+  background-color: #b39e97;
+  padding: 0px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  height:150px;
+  width: 100%;
+  float:left;
+}
+nav ul { 
+  list-style-type: none;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  nav, article,aside,summary{
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body> 
+  <nav>
+    <h2>DIY Gifts {{gifts}}</h2>
+    <h1>Give your Feeling a new Style by making gifts on your own for someone special</h1> 
+      </nav>
+  <article>
+    <h2>DIY Decor {{decor}}</h2>
+    <h1>Decorate your space effortlessly because story behind every celebration matters</h1>
+      </article>
+  <aside>
+    <h2>Recycling Crafts {{recycle}}</h2>
+    <h1>Make every creation unique in its own way by crafting what you have</h1>
+     </aside>
+  <summary>
+    <h2> Covid {{popular}}</h2>
+    <h3>Cover your cough and sneeze, make your own sanitizers with your own skills</h3>
+      </summary>
+  <footer>
+    <h1>{{aboutus}}
+        </h1>
+        <h4>
+          Don’t start your projects without our DIY crafts-Creating at your best..
+          If you are embarking on a DIY project for the very first time,it goes without
+           saying that you will run into some challenges. For DIY newbies,here are some tips to
+            help you out in the form of DIY Crafts. There are several options to choose from our app. </h4>
+     </footer>
+     </body>
+</html>
+

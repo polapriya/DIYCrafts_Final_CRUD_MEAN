@@ -1,0 +1,42 @@
+
+<style>
+    h2{text-align: center;
+    font-size: 200%;
+    font-family: 'Dancing Script';
+         }
+    </style>
+
+<body> 
+    <h2> {{mode}} Your Craft Ideas</h2>      
+    <body>
+    <form (ngSubmit)="Onsubmit()" #myForm="ngForm">
+      <mat-form-field >
+        <input matInput placeholder="Craft Type:" id="crafttype" [(ngModel)]= "crafttype" name="crafttype" >
+      </mat-form-field>    
+
+      <mat-form-field >
+        <input matInput placeholder="Craft Name:" id="craftname" [(ngModel)]="craftname" name="craftname" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <input matInput placeholder="Material:" id="material" [(ngModel)]="material" name="material" >
+      </mat-form-field>    
+
+      <mat-form-field >
+        <input matInput placeholder="Required Time:" id="requiredtime" [(ngModel)]="requiredtime" name="requiredtime" >
+      </mat-form-field>
+
+          <mat-form-field >
+        <input matInput placeholder="Notes:" id="notes" [(ngModel)]="notes" name="notes" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <input matInput placeholder="Customer Rating:" id="customerrating" [(ngModel)]="customerrating" name="customerrating" >
+      </mat-form-field>  
+
+      <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+          </p>
+    </form>
+  </body>
+    

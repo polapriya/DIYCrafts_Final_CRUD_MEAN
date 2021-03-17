@@ -1,0 +1,50 @@
+<style>
+  h1,h3 {text-align: center;
+    font-size: 200%;
+    font-family: 'Dancing Script';}
+  div{text-align: center;
+    font-family: courier;}
+  </style> 
+  
+    <body>
+      <div>
+    <h1>{{mode}} YOUR DECOR IDEAS</h1>
+
+<!-- 
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm"> -->
+      <form #profileForm="ngForm" novalidate (ngSubmit)="onSubmit() ">
+        
+        <!-- {{profileForm.value | json}}  -->
+      <mat-form-field >
+        <input matInput placeholder="Fiesta" id="Fiesta" [(ngModel)]=" Fiesta" name="Fiesta" >
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Publisher" id="Publisher" [(ngModel)]=" Publisher" name="Publisher" >
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Cost Details" id="CostDetails" [(ngModel)]=" CostDetails" name="CostDetails" >
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Equipment Required" id="EquipmentRequired" [(ngModel)]=" EquipmentRequired" name="EquipmentRequired" >
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Image URL" id="ImageURL" [(ngModel)]=" ImageURL" name="ImageURL" >
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Youtube Link" id="YoutubeLink" [(ngModel)]=" YoutubeLink" name="YoutubeLink" >
+      </mat-form-field>
+
+
+      <br>
+        <button type="submit" mat-raised-button color="warn">Post</button>  
+        <h1>Do not want to post anything? </h1>
+        <h1>You can now grab ideas for your projects navigating to Decor List under menu!!</h1>
+    </form>
+    </div>
+  </body>
+       
+
+
+
+
+

@@ -1,0 +1,51 @@
+<style>
+ div{
+  background: #FFEBCD;
+  width: 100%;
+ }
+  table{background: #FFEBCD;
+    padding: 5px;
+      font-family: 'courier';
+      border-collapse: collapse;
+      font-size: 12px;
+      width: 100%;
+      
+      }
+      th, h1, td {
+        padding: 2px;
+      text-align: center;
+      font-family: 'courier';
+      border-bottom: 1px solid rgb(206, 16, 16);
+    }
+    tr:nth-child(even) {background-color:  #E9967A;}
+  </style>
+  <div>
+    <h1> Decor List </h1>
+  <table align ="center" cellspacing="30">
+    <tr>
+        <th>Fiesta</th>
+        <th>Publisher</th>
+        <th>Cost Details</th>
+        <th>Equipment Required</th>
+        <th>Image URL</th>
+        <th>YouTube Link</th>
+        <th>Action</th>
+        
+        <!-- <th>ID</th>
+        <th>Index</th>    -->
+    </tr>
+    <tr *ngFor="let decor of decors let i = index">
+        <td>{{decor.Fiesta}}</td>
+        <td>{{decor.Publisher}}</td>
+        <td>{{decor.CostDetails}}</td>
+        <td>{{decor.EquipmentRequired}}</td>
+        <td>{{decor.ImageURL}}</td>
+        <td>{{decor.YoutubeLink}}</td>
+        <!-- <td>{{decor._id}}</td>
+              <td>(index {{i}})</td> -->
+              <td><button mat-button color="warn" (click)="onDelete(decor._id)">DELETE</button>
+             <button mat-button color="primary" [routerLink]="['/editdecor', decor._id]">UPDATE</button>
+            </td> 
+    </tr>
+  </table> 
+</div>
